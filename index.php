@@ -58,5 +58,69 @@ echo $name2, $age2, "\n";
 
 ?>
 
+
+
+<?php // List of keywords for php
+
+abstract    and          array()     as          break
+case        catch        class       clone       const  
+continue    declare      default     do          else
+elseif      enddeclare   endfor      endforeach  endif
+endswitch   endwhile     extends     final       for 
+foreach     function     global      goto        if  
+implements  interface    instanceof  namespace   new   
+or          private      protected   public      static
+switch      throw        try         use         var 
+while       xor
+
+// List of language constructs
+die()           echo()          empty()     exit()      eval()
+include()       include_once()  isset()     list()      require()
+require_once()  return()        print()     unset()     
+
+?>
+
+
+<?php //print will print the value of $a to the console, but not on a new line. Print only takes 1 arguement.
+
+$a = 23;
+print $a;
+
+?>
+
+<?php //echo is the same as print, but it takes more than 1 arguement
+
+$a = 23;
+$b = 24;
+
+echo $a, "\n", $b, "\n";
+
+?>
+
+
+
+<?php //PHP scripts can receive command line arguments. They follow the name of the program. The $argv is an array holding all arguments of a PHP script. The $argc holds the number of arguments passed, including the name of the PHP script.
+
+echo "There are $argc arguments\n";
+
+for ($i=0; $i < $argc; $i++) {
+    echo $argv[$i] . "\n";
+}
+
+?>
+
+
+
+<?php //In PHP, we can create constants. A constant is a name for a value that, unlike a variable, cannot be reassociated with a different value. We use the define() function to create constants in PHP.
+
+define("BLUE", "0000FF");
+
+echo BLUE, "\n";
+
+echo defined("BLUE");
+echo "\n";
+
+?>
+
 </body>
 </html>
