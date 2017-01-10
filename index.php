@@ -122,5 +122,68 @@ echo "\n";
 
 ?>
 
+
+
+
+<?php //these are predefined constants.
+
+echo TRUE;
+echo "\n";
+echo PHP_VERSION;
+echo "\n";
+echo PHP_OS;
+echo "\n";
+echo __LINE__;
+echo "\n";
+echo __FILE__;
+echo "\n";
+echo DIRECTORY_SEPARATOR;
+echo "\n";
+echo PHP_DATADIR;
+echo "\n";
+
+?>
+
+
+
+<?php //this is how you interpolate in php. same thing as interpolating in other languages, just different syntax
+
+$age = 17;
+
+echo "Jane is $age years old\n";   // simply returns the line with the age variable, which is 17
+
+//only works in double quotes, if the line was echo 'Jane is $age years old\n'; it would print $age instead of 17
+
+?>
+
+
+
+<?php //file named common.php
+
+define("VERSION", 1.12);
+
+function get_max($x, $y) {
+    if ($x > $y) {
+        return $x;
+    } else {
+        return $y;
+    }
+}
+
+?>
+
+<?php //file named myfile.php
+
+include "common.php";  //this is how you include other files i
+
+echo "The version is " . VERSION . "\n";
+
+$a = 5;
+$b = 3;
+
+echo get_max($a, $b), "\n";
+
+?>
+
 </body>
 </html>
